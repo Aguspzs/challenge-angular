@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row heroes" *ngIf="heroes">
+        <h1>Resultado para:</h1>
+        <h3>{{q}}</h3>
+        <app-grid [heroes]="heroes" [button]="button"></app-grid>
+    </div>
+    <div *ngIf="empty">
+        <div class="alert alert-dark mt-5" role="alert">
+            Su búsqueda no ha arrojado resultados! Intente con otro nombre...
+        </div>
+    </div>
+</div>

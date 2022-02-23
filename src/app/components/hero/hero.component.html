@@ -1,0 +1,43 @@
+<div class="modal" [id]="'modal'+index" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{heroe.name}}</h5>
+                <button type="button" class="close btn-1 btn-2" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
+          </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="text-center">
+                    <p class="mb-0"><strong>Alias:</strong> </p>
+                    <ul>
+                        <li *ngFor="let alias of heroe.biography.aliases">
+                            <p>{{alias}}</p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p><strong>Peso:</strong> </p>
+                    <p>{{heroe.appearance.weight[1]}}</p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p><strong>Altura:</strong> </p>
+                    <p>{{heroe.appearance.height[1]}}</p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p><strong>Color de ojos:</strong> </p>
+                    <p>{{heroe.appearance['eye-color']}}</p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p><strong>Color de cabello:</strong> </p>
+                    <p>{{heroe.appearance['hair-color']}}</p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <p><strong>Trabajo:</strong> </p>
+                    <p>{{heroe.work.occupation}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

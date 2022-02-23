@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(33, 37, 41, 0.69);
+    opacity: 1;
+    background-image: linear-gradient(135deg, rgba(33, 37, 41, 1) 25%, transparent 25%), linear-gradient(225deg, rgba(33, 37, 41, 1) 25%, transparent 25%), linear-gradient(45deg, rgba(33, 37, 41, 1) 25%, transparent 25%), linear-gradient(315deg, rgba(33, 37, 41, 1) 25%, rgba(33, 37, 41, 0.69) 25%);
+    background-position: 4px 0, 4px 0, 0 0, 0 0;
+    background-size: 4px 4px;
+    background-repeat: repeat;
+    /*background-color: rgb(33, 37, 41);*/
+}
+
+h1,
+h2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    color: #ffffff96;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.btn-1 {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 12px;
+    border: 0.16em solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 45px;
+    height: 45px;
+}
+
+.btn-2 {
+    color: rgb(33, 37, 41);
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-1:hover {
+    margin-top: 20px;
+    color: rgb(33, 37, 41);
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-2:hover {
+    background-color: x;
+    color: rgb(255, 255, 255);
+}

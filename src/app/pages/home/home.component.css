@@ -1,0 +1,21 @@
+.powerstats {
+    padding: 0px 25px;
+    margin-top: 60px;
+}
+
+.progress {
+    border-radius: 0;
+    background-color: #e9ecef66;
+}
+
+.progress-bar {
+    background-color: white;
+}
+
+.powerstat {
+    margin: 20px 0;
+}
+
+.powerstat h4 {
+    font-size: 14px;
+}

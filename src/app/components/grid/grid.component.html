@@ -1,0 +1,50 @@
+<div class="row" *ngIf="heroes">
+    <div *ngFor="let heroe of heroes; index as i" class="col-sm-6 col-lg-4 d-flex justify-content-center">
+        <div class="card-container">
+            <!--Modal con info del heroe-->
+            <app-hero [heroe]="heroe" [index]="i"></app-hero>
+
+            <div class="card d-flex" [ngStyle]="{'background-image': 'url(' + heroe.image.url + ')'}">
+                <!--Principal-->
+                <div [ngClass]="{'card-body-2' : heroe.toggle}" class="card-body">
+                    <h5 class="card-title">{{heroe.name | uppercase}}<i *ngIf="heroe.biography.alignment == 'good'|| heroe.biography.alignment === 'neutral'" class="fas fa-smile"></i><i *ngIf="heroe.biography.alignment == 'bad'" class="fas fa-angry"></i></h5>
+                    <!--Estadisticas del heroe-->
+                    <div *ngIf="heroe.toggle" class="powerstats">
+                        <h4>Inteligencia</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.width.%]="heroe.powerstats.intelligence" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4>Fuerza</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.width.%]="heroe.powerstats.strength" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4>Velocidad</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.width.%]="heroe.powerstats.speed" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4>Durabilidad</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.width.%]="heroe.powerstats.durability" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4>Poder</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.width.%]="heroe.powerstats.power" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4>Combate</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.width.%]="heroe.powerstats.combat" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="buttons d-flex justify-content-between align-items-end">
+                        <div class="buttons d-flex justify-content-start align-items-end">
+                            <a class="btn-1 btn-2" style="margin-left: 0;" (click)="heroe.toggle = !heroe.toggle"><i class="fas fa-chart-line"></i></a>
+                            <a class="btn-1 btn-2" type="button" data-bs-toggle="modal" [attr.data-bs-target]="'#modal'+i"><i class="fas fa-info"></i></a>
+                        </div>
+                        <a class="btn-1" *ngIf="button" (click)="deleteHeroe(heroe.id)"><i class="fas fa-trash"></i></a>
+                        <a class="btn-1" *ngIf="!button" (click)="addHeroe(heroe.id)"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

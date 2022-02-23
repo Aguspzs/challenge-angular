@@ -1,27 +1,18 @@
-# ChallengeAngular
+CHALLENGE FRONTEND -
+Angular 🚀
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Objetivo
+Desarrollar una aplicación para crear un equipo de superhéroes que consumirá una API externa y
+mostrará diferentes atributos a nivel individual de cada miembro y del equipo consolidado.
 
-## Development server
+�� Consumir los endpoints de la API para realizar las distintas operaciones.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+�� Adicionalmente, las diferentes secciones que tendrá la app deberán protegerse verificando que
+el usuario autenticado disponga de un token que se almacenará en localStorage. El mismo, se
+obtendrá de una API con datos de muestra. Si un usuario intenta ingresar a cualquier ruta sin estar
+autenticado, deberá ser redirigido al login.
 
-## Code scaffolding
+�� Para el manejo de peticiones HTTP deberá utilizarse HttpClient con Observables.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+�� El sitio deberá ser responsive, y utilizar Bootstrap como punto de partida para aprovechar
+las características de la librería

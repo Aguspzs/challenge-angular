@@ -1,0 +1,24 @@
+<div class="container" *ngIf="!empty">
+    <div class="row heroes" *ngIf="heroes && powerstats">
+        <h1 class="mt-3">Equipo de Héroes</h1>
+        <h3>tipo de equipo: <i [ngClass]="powerstats[0].icono"></i></h3>
+        <app-grid [heroes]="heroes" [button]="true"></app-grid>
+    </div>
+    <div class="row powerstats" *ngIf="powerstats">
+        <h2>Estadísticas del equipo</h2>
+        <h3>peso promedio: {{weight.weight}}kg </h3>
+        <h3>altura promedio: {{weight.height}}cm</h3>
+        <div class="powerstat" *ngFor="let power of powerstats; index as i">
+            <h3>{{power.nombre}} <i [ngClass]="power.icono"></i></h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [style.width.%]="power.valor" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container" *ngIf="empty">
+    <div class="alert alert-dark mt-5" role="alert">
+        Aún no hay héroes en el equipo! Buscalos por sus nombres y agregalos...
+    </div>
+</div>
